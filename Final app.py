@@ -1,8 +1,3 @@
-# PHISHGUARD COMPLETE IMPLEMENTATION
-
-# =====================
-# 1. Streamlit App (app.py)
-# =====================
 import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -155,10 +150,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# =====================
-# 3. Requirements (requirements.txt)
-# =====================
+    
 streamlit==1.22.0
 scikit-learn==1.2.2
 pandas==1.5.3
@@ -251,9 +243,6 @@ body {
     padding: 0;
 }
 
-/* [Previous CSS rules remain the same] */
-
-/* New JS-enhanced styles */
 .char-count {
     text-align: right;
     font-size: 0.8rem;
