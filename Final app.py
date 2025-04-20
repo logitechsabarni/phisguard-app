@@ -68,9 +68,6 @@ if st.button("Analyze Email"):
 st.markdown("---")
 st.markdown("### How to Deploy PhishGuard\n```python\npip install streamlit\nstreamlit run app.py\n```")
 
-# =====================
-# 2. CLI Tool (phishguard_cli.py)
-# =====================
 import argparse
 import re
 import joblib
@@ -150,12 +147,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-streamlit==1.22.0
-scikit-learn==1.2.2
-pandas==1.5.3
-joblib==1.2.0
-numpy==1.24.2
 
 <!DOCTYPE html>
 <html lang="en">
@@ -182,8 +173,6 @@ numpy==1.24.2
             
             <div class="features">
              
-
-# templates/results.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
