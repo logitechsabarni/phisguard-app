@@ -4,187 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhishGuard</title>
-    <style>
+    <link rel="stylesheet" href="styles.css">
+<style>
+        /* Styling for the dashboard */
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f9;
         }
 
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dashboard {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+
         h1 {
+            text-align: center;
             color: #333;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .card {
+            margin: 20px 0;
         }
 
-        th, td {
+        input {
+            width: 100%;
             padding: 10px;
-            text-align: left;
+            margin: 10px 0;
             border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            margin-top: 20px;
-            display: inline-block;
-        }
-
-        #chart {
-            margin-top: 40px;
-        }
-
-        #scan-form {
-            margin-bottom: 20px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            width: 100%;
-            margin: 5px 0;
+            border-radius: 5px;
         }
 
         button {
-            padding: 10px 20px;
-            background-color: #28a745;
-            border: none;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
             color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: #218838;
+            background-color: #45a049;
         }
 
-        .result {
-            padding: 20px;
-            border: 1px solid #ddd;
+        .results {
+            background-color: #fafafa;
+            padding: 10px;
+            border-radius: 5px;
             margin-top: 20px;
         }
 
-        .result p {
-            margin: 5px 0;
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <h1>PhishGuard</h1>
 
-    <!-- Scan Form -->
-    <div id="scan-form">
-        <label for="email-text">Enter Email Text:</label>
-        <input type="text" id="email-text" placeholder="Paste email content here">
-        <button onclick="scanEmail()">Scan Email</button>
+    <!-- Dashboard Content -->
+    <div class="container">
+        <div class="dashboard">
+            <h1>Phishing Detection Dashboard</h1>
+            <div class="card">
+                <h2>Email Scanning</h2>
+                <input type="text" id="email-input" placeholder="Paste email content here..." />
+                <button onclick="scanEmail()">Scan Email</button>
+            </div>
+
+            <div id="results" class="results">
+                <!-- Results will be displayed here -->
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2025 PhishGuard. All rights reserved.</p>
+            </div>
+        </div>
     </div>
 
-    <div id="scan-result" class="result" style="display: none;">
-        <p><strong>Prediction:</strong> <span id="prediction"></span></p>
-        <p><strong>Confidence:</strong> <span id="confidence"></span></p>
-        <p><strong>Flagged Words:</strong> <span id="flagged-words"></span></p>
-        <p><strong>Links Found:</strong> <span id="links"></span></p>
-    </div>
+    <<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhishGuard Dashboard</title>
 
-    <!-- Chart -->
-    <div id="chart">
-        <!-- Placeholder for the chart -->
-    </div>
+  <!-- ✅ Linking the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>PhishGuard 🛡️</h1>
+    <p>Your Personal AI Email Scanner</p>
+  </header>
 
-    <h2>Scan History</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Prediction</th>
-                <th>Confidence</th>
-                <th>Flagged Words</th>
-                <th>Links</th>
-            </tr>
-        </thead>
-        <tbody id="scan-history">
-            <!-- Scan results will be appended here -->
-        </tbody>
-    </table>
+  <main>
+    <section class="input-section">
+      <h2>📥 Paste Email Content</h2>
+      <textarea id="emailInput" placeholder="Paste suspicious email content here..."></textarea>
+      <button onclick="scanEmail()">Scan Email</button>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/plotly.js"></script>
-    <script>
-        // Placeholder for scan history and chart
-        let scanHistory = [];
+    <section class="result-section">
+      <h2>📊 Scan Results</h2>
+      <div id="resultOutput"></div>
+    </section>
+  </main>
 
-        // Simulate backend scan for email
+  <footer>
+    <p>© 2025 PhishGuard. Stay Safe Online!</p>
+  </footer>
+
+  <!-- ✅ Linking the external JS file -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+>
+        
         function scanEmail() {
-            const emailText = document.getElementById('email-text').value;
-            if (!emailText.trim()) return;
+            const emailContent = document.getElementById('email-input').value;
+            
+            if (emailContent.trim() === "") {
+                alert("Please paste an email content to scan!");
+                return;
+            }
 
-            // Dummy scan result (replace with actual backend integration)
-            const result = {
-                prediction: Math.random() > 0.5 ? 'High ⚠️' : 'Low ✅',
-                confidence: (Math.random() * 100).toFixed(2) + '%',
-                flaggedWords: ['urgent', 'click', 'verify'],
-                links: ['http://example.com', 'http://suspicious-link.com']
-            };
+            // Simulate a result after scanning
+            const result = analyzeEmailContent(emailContent);
 
-            // Display scan result
-            document.getElementById('prediction').innerText = result.prediction;
-            document.getElementById('confidence').innerText = result.confidence;
-            document.getElementById('flagged-words').innerText = result.flaggedWords.join(', ');
-            document.getElementById('links').innerText = result.links.join(', ');
-
-            document.getElementById('scan-result').style.display = 'block';
-
-            // Add result to scan history
-            scanHistory.push(result);
-            updateScanHistory();
-            updateChart();
+            // Display the result on the page
+            const resultDiv = document.getElementById('results');
+            resultDiv.innerHTML = `
+                <h3>Scan Result</h3>
+                <p><strong>Phishing Risk:</strong> ${result.isPhishing ? 'High ⚠️' : 'Low ✅'}</p>
+                <p><strong>Confidence:</strong> ${result.confidence}%</p>
+                <p><strong>Links found:</strong> ${result.links.join(', ') || 'None'}</p>
+                <p><strong>Suspicious Words:</strong> ${result.suspiciousWords.join(', ') || 'None'}</p>
+            `;
         }
 
-        // Update scan history table
-        function updateScanHistory() {
-            const historyTable = document.getElementById('scan-history');
-            historyTable.innerHTML = '';
+        function analyzeEmailContent(content) {
+            // Placeholder analysis (this should be replaced with real backend logic)
+            const phishingWords = ['urgent', 'click', 'verify', 'login', 'password'];
+            const links = content.match(/https?:\/\/[^\s]+/g) || [];
+            const suspiciousWords = phishingWords.filter(word => content.toLowerCase().includes(word));
 
-            scanHistory.forEach(result => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${result.prediction}</td>
-                    <td>${result.confidence}</td>
-                    <td>${result.flaggedWords.join(', ')}</td>
-                    <td>${result.links.join(', ')}</td>
-                `;
-                historyTable.appendChild(row);
-            });
-        }
+            // Simple logic for phishing detection (for example purposes)
+            const isPhishing = suspiciousWords.length > 0;
+            const confidence = isPhishing ? Math.min(100, 50 + suspiciousWords.length * 10) : 20;
 
-        // Update pie chart (for phishing vs safe emails)
-        function updateChart() {
-            const phishingCount = scanHistory.filter(result => result.prediction === 'High ⚠️').length;
-            const safeCount = scanHistory.length - phishingCount;
-
-            const data = [
-                { label: 'Phishing', value: phishingCount },
-                { label: 'Safe', value: safeCount }
-            ];
-
-            const layout = {
-                title: 'Phishing vs Safe Emails',
-                height: 400,
-                width: 500
+            return {
+                isPhishing,
+                confidence,
+                links,
+                suspiciousWords
             };
-
-            const chartData = [{
-                values: data.map(d => d.value),
-                labels: data.map(d => d.label),
-                type: 'pie'
-            }];
-
-            Plotly.newPlot('chart', chartData, layout);
         }
     </script>
+    
 </body>
 </html>
