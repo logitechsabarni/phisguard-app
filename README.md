@@ -1,9 +1,9 @@
 
-# 🛡️ PhishGuard - Email Phishing Detector (Console App)
+ 🛡️ PhishGuard - Email Phishing Detector (Console App)
 
 PhishGuard is a simple AI-powered console application that helps detect phishing emails using basic machine learning and rule-based techniques.
 
-## 🚀 Features
+🚀 Features
 
 - Detects phishing emails using a trained ML model (Logistic Regression)
 - Highlights suspicious keywords (e.g., "click", "verify", "urgent")
@@ -11,22 +11,22 @@ PhishGuard is a simple AI-powered console application that helps detect phishing
 - Provides confidence score and simple recommendations
 - Console-based interface (no GUI)
 
-## 📦 Requirements
+ 📦 Requirements
 
 Install dependencies using pip:
 
-```bash
+bash
 pip install scikit-learn pandas numpy nltk
-```
 
-## 🛠️ How to Run
+
+ 🛠️ How to Run
 
 1. Clone or download this repository.
 2. Open terminal and run:
 
-```bash
+bash
 python phishguard_app.py
-```
+
 
 3. Paste email content when prompted.
 4. Type `exit` to quit the program.
@@ -69,4 +69,9 @@ In its full version, PhishGuard is envisioned to:
 - Maintain a real-time database of phishing sources and deliver timely warnings.
 
 This prototype demonstrates the core vision of the project and lays the groundwork for future development.
+Lastly the website which focuses on its future uses is given below:
+https://aisite.10web.io/56/usually-capable-bull/
+It is an overall website which can be published for future uses which tells us about its uses and what purposes this app will serve in the near future.
+
+
 
