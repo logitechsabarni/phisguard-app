@@ -78,5 +78,10 @@ Lastly the website which focuses on its future uses is given below:
 https://aisite.10web.io/56/usually-capable-bull/.
 It is an overall website in which there are certain things which have not been implemented in this prototype app as it requires highly advanced knowledge and technology but it can be published or implemented for future needs, comfort, requirements and uses and what purposes this app will serve in the near future.
 
+A minor update was made to this repository after the official hackathon deadline to ensure the email scanning simulation displays results properly on the dashboard.  
+This change was purely visual and non-functional — the core app logic and idea remain 
+ exactly as submitted.  
+The update was intended only to better showcase the intended prototype experience and does not affect the original submission integrity.
+ 
 
 
