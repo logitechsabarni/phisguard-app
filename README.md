@@ -70,7 +70,7 @@ In its full version, PhishGuard is envisioned to:
 
 This prototype demonstrates the core vision of the project and lays the groundwork for future development.
 Lastly the website which focuses on its future uses is given below:
-https://aisite.10web.io/56/usually-capable-bull/
+https://aisite.10web.io/56/usually-capable-bull/.
 It is an overall website which can be published for future uses which tells us about its uses and what purposes this app will serve in the near future.
 
 
