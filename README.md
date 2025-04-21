@@ -49,6 +49,4 @@ Dear user, your email is scheduled for deactivation. Click here http://fake-link
 - Trained using a small sample dataset with `CountVectorizer` and `LogisticRegression`.
 - Can be improved by expanding the dataset.
 
----
-
-Made with ❤️ for hackathons and learning.
+It is a protype only and not a fully functional ML model made by me.
