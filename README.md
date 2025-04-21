@@ -53,8 +53,13 @@ It is a protype only and not a fully functional ML model.
 The link to this prototype app is:
 https://phisguard-app-1.onrender.com
 
+This is the mobile version of the website which is simple and somewhat sticks to my current protype app only, which is the paste email content and the scan email result part. 
 
-Absolutely! Here's a polished message you can paste directly into your **README.md** under a section like `## Disclaimer & Future Scope`:
+The images link are given below:
+(https://github.com/user-attachments/assets/8ba6edf6-4d4c-4cd6-843a-7f90e68c7307)
+(https://github.com/user-attachments/assets/e820054e-9748-43e2-9640-54796fd2ea6f)
+(https://github.com/user-attachments/assets/2ba1edf3-3c22-4891-b2e0-96be26f74f6d)
+
 
 ⚠️ Disclaimer & 🚀 Future Scope
 
